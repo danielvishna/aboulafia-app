@@ -1,8 +1,8 @@
 app_name = "aboulafia"
 app_title = "Aboulafia"
-app_publisher = "Daniel"
-app_description = "11"
-app_email = "Daniel.vishna@gmail.com"
+app_publisher = "dani"
+app_description = "hhh"
+app_email = "daniel.vishna@gmail.com"
 app_license = "mit"
 
 # Apps
