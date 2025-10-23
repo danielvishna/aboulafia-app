@@ -28,8 +28,15 @@ doc_events = {
 # app_include_css = ["/assets/aboulafia/css/custom_styles.css"]
 
 # app_include_js = ["/assets/aboulafia/js/custom_ui.js",]
-desk_include_css = ["/assets/aboulafia/css/custom_styles.css"]
-desk_include_js  = ["/assets/aboulafia/js/custom_ui.js"]
+# נטען בכל ה-Desk (זה המפתח התקין ב-Frappe 15)
+app_include_css = ["/assets/aboulafia/css/custom_styles.css"]
+app_include_js  = ["/assets/aboulafia/js/custom_ui.js"]
+
+# נטען את אותו JS גם ברמת כל Doctype, כדי להבטיח שהוא ירוץ על כל טופס
+doctype_js = {
+    "*": "public/js/custom_ui.js",   # נתיב יחסי מתוך האפליקציה
+}
+
 
 # app_include_js = "public/js/_ping.js"
 
