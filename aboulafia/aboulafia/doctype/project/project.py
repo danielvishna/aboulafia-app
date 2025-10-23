@@ -2,6 +2,11 @@ import frappe
 
 def on_validate(doc, method=None):
     # --- חוק 1: בדיקת ייחודיות של לקוח + שנת פרויקט ---
+    frappe.throw(
+            f"כבר קיים פרויקט עבור הלקוח <b>{doc.customer}</b> לשנת <b>{doc.project_year}</b>.\
+                אם תרצה לצור עוד מאותו סוג לשנת {doc.project_year}</b>, יש למלא שדה תיאור לפרויקט.",
+            title="כפילות פרויקט"
+        )
     if not doc.customer:
         return  # אם אין לקוח, לא נבצע את הבדיקה
     
