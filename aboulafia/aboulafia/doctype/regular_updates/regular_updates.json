@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{client} {subject} {years} ",
+ "creation": "2025-09-03 16:45:31.293118",
+ "custom": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "subject",
+  "title",
+  "years",
+  "making_note_user",
+  "date_update",
+  "relevant_employees",
+  "customer_updated",
+  "involved_departments_display",
+  "last_modifier",
+  "column_break_xpsb",
+  "\u05de\u05d7\u05dc\u05e7\u05d5\u05ea_\u05d0\u05d7\u05e8\u05d0\u05d9\u05d5\u05ea",
+  "bookkeeping_department",
+  "audit_department",
+  "israeli_taxes_department",
+  "american_taxes_department",
+  "relocation_department",
+  "conversation_text",
+  "start_date",
+  "end_date",
+  "doc_file"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "\u05dc\u05e7\u05d5\u05d7",
+   "options": "Private Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u05e0\u05d5\u05e9\u05d0",
+   "options": "\n\u05d4\u05e4\u05e0\u05d9\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea\n\u05e2\u05d3\u05db\u05d5\u05e0\u05d9 \u05de\u05e6\u05d1 \u05e2\u05e1\u05e7\u05d9\n\u05de\u05e9\u05e4\u05d7\u05ea\u05d9\n\u05d4\u05de\u05dc\u05e6\u05d4 \u05dc\u05e9\u05d9\u05e0\u05d5\u05d9 \u05e1\u05d8\u05d8\u05d5\u05e1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "\u05db\u05d5\u05ea\u05e8\u05ea",
+   "reqd": 1
+  },
+  {
+   "fieldname": "years",
+   "fieldtype": "Data",
+   "label": "\u05e9\u05e0\u05d9\u05dd",
+   "reqd": 1
+  },
+  {
+   "fieldname": "making_note_user",
+   "fieldtype": "Data",
+   "label": "\u05e8\u05d5\u05e9\u05dd \u05d4\u05e2\u05e8\u05d4",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_update",
+   "fieldtype": "Date",
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relevant_employees",
+   "fieldtype": "Table MultiSelect",
+   "label": "\u05e2\u05d5\u05d1\u05d3\u05d9\u05dd \u05e8\u05dc\u05d5\u05d5\u05e0\u05d8\u05d9\u05d9\u05dd",
+   "options": "Select Users"
+  },
+  {
+   "fieldname": "customer_updated",
+   "fieldtype": "Select",
+   "label": "\u05dc\u05e7\u05d5\u05d7 \u05e2\u05d5\u05d3\u05db\u05df",
+   "options": "\n\u05db\u05df\n\u05dc\u05d0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "involved_departments_display",
+   "fieldtype": "Data",
+   "label": "\u05d4\u05de\u05d7\u05dc\u05e7\u05d5\u05ea \u05d4\u05de\u05e2\u05d5\u05e8\u05d1\u05d5\u05ea",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modifier",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e6\u05d1\u05e2 \u05d4\u05e9\u05d9\u05e0\u05d5\u05d9 \u05d4\u05d0\u05d7\u05e8\u05d5\u05df",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xpsb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "\u05de\u05d7\u05dc\u05e7\u05d5\u05ea_\u05d0\u05d7\u05e8\u05d0\u05d9\u05d5\u05ea",
+   "fieldtype": "Heading",
+   "label": "\u05de\u05d7\u05dc\u05e7\u05d5\u05ea \u05d0\u05d7\u05e8\u05d0\u05d9\u05d5\u05ea"
+  },
+  {
+   "default": "0",
+   "fieldname": "bookkeeping_department",
+   "fieldtype": "Check",
+   "label": "\u05d4\u05e0\u05d4\"\u05d7"
+  },
+  {
+   "default": "0",
+   "fieldname": "audit_department",
+   "fieldtype": "Check",
+   "label": "\u05d1\u05d9\u05e7\u05d5\u05e8\u05ea"
+  },
+  {
+   "default": "0",
+   "fieldname": "israeli_taxes_department",
+   "fieldtype": "Check",
+   "label": "\u05de\u05d9\u05e1\u05d9\u05dd \u05d9\u05e9\u05e8\u05d0\u05dc\u05d9\u05dd"
+  },
+  {
+   "default": "0",
+   "fieldname": "american_taxes_department",
+   "fieldtype": "Check",
+   "label": "\u05de\u05d9\u05e1\u05d9\u05dd \u05d0\u05de\u05e8\u05d9\u05e7\u05d0\u05d9\u05dd"
+  },
+  {
+   "default": "0",
+   "fieldname": "relocation_department",
+   "fieldtype": "Check",
+   "label": "\u05e8\u05d9\u05dc\u05d5\u05e7\u05d9\u05d9\u05e9\u05df"
+  },
+  {
+   "fieldname": "conversation_text",
+   "fieldtype": "Long Text",
+   "label": "\u05de\u05dc\u05dc \u05e9\u05d9\u05d7\u05d4"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da \u05ea\u05d7\u05d9\u05dc\u05ea \u05d8\u05d9\u05e4\u05d5\u05dc",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da \u05e1\u05d5\u05e3 \u05d8\u05d9\u05e4\u05d5\u05dc",
+   "read_only": 1
+  },
+  {
+   "fieldname": "doc_file",
+   "fieldtype": "Attach",
+   "label": "\u05e6\u05e8\u05e3 \u05de\u05e1\u05de\u05da"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-22 12:09:12.588904",
+ "modified_by": "Administrator",
+ "module": "Aboulafia",
+ "name": "Regular Updates",
+ "naming_rule": "Expression",
+ "owner": "daniel.vishna@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

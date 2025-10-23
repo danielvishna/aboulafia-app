@@ -7,6 +7,30 @@ app_license = "mit"
 
 # Apps
 # ------------------
+doc_events = {
+    "Regular Updates": {
+        "validate": "aboulafia.aboulafia.doctype.regular_updates.regular_updates.on_validate",
+        "after_insert": "aboulafia.aboulafia.doctype.regular_updates.regular_updates.after_insert",
+        "on_update": "aboulafia.aboulafia.doctype.regular_updates.regular_updates.on_update",
+    },
+    "Private Client": {
+        "validate": "aboulafia.aboulafia.doctype.connections.private_client.on_validate",
+    },
+    "Client Projects": {
+        "on_submit": "aboulafia.api.trigger_client_department_update",
+        "on_update": "aboulafia.api.trigger_client_department_update",
+        "on_trash": "aboulafia.api.trigger_client_department_update"
+    },
+    "Customer": {
+        "validate": "aboulafia.aboulafia.doctype.customer.customer.on_validate",
+    },
+}
+
+# app_include_js = "public/js/_ping.js"
+
+# doctype_js = {
+#     "Private Client": "public/js/private_client.js"
+# }
 
 # required_apps = []
 

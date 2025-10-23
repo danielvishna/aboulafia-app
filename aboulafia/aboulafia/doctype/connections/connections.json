@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{connection}-{entity_a}-{entity_b}-{###}",
+ "creation": "2025-09-14 16:44:49.729067",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "connection",
+  "section_break_pqwa",
+  "entity_type_a",
+  "entity_a",
+  "column_break_xvff",
+  "entity_type_b",
+  "entity_b"
+ ],
+ "fields": [
+  {
+   "fieldname": "connection",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u05e1\u05d5\u05d2 \u05e7\u05e9\u05e8",
+   "options": "\n\u05e7\u05e9\u05e8 \u05de\u05e9\u05e4\u05d7\u05ea\u05d9\n\u05e7\u05d1\u05d5\u05e6\u05ea \u05d7\u05d1\u05e8\u05d5\u05ea\n\u05d1\u05e2\u05dc\u05d9 \u05de\u05e0\u05d9\u05d5\u05ea\n\u05e0\u05d0\u05de\u05e0\u05d5\u05d9\u05d5\u05ea\n\u05dc\u05e7\u05d5\u05d7 \u05de\u05e4\u05e0\u05d4",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pqwa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "entity_type_a",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "\u05e1\u05d5\u05d2 \u05d9\u05e9\u05d5\u05ea \u05d0'",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "entity_a",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "\u05d9\u05e9\u05d5\u05ea \u05d0'",
+   "options": "entity_type_a",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xvff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entity_type_b",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "\u05e1\u05d5\u05d2 \u05d9\u05e9\u05d5\u05ea \u05d1'",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "entity_b",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "\u05d9\u05e9\u05d5\u05ea \u05d1'",
+   "options": "entity_type_b",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-25 18:17:51.280802",
+ "modified_by": "Administrator",
+ "module": "Aboulafia",
+ "name": "Connections",
+ "naming_rule": "Expression",
+ "owner": "daniel.vishna@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

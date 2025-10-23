@@ -1,0 +1,912 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{husband_taz}{husband_passport}-{hebrew_name}",
+ "creation": "2025-09-22 15:39:45.199551",
+ "custom": 1,
+ "description": "1",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_h7p9",
+  "client_type",
+  "hebrew_name",
+  "english_name",
+  "section_break_slu7",
+  "customer_id",
+  "primary_phone",
+  "secondary_phone",
+  "section_break_z3jj",
+  "primary_email",
+  "secondary_email",
+  "preferred_language",
+  "enable_editing_check_personal_information",
+  "general_information_section",
+  "background",
+  "special_requests",
+  "column_break_mzzs",
+  "birth_date",
+  "portfolio_manager",
+  "marital_status",
+  "nationalities_husband",
+  "husband_taz",
+  "husband_passport",
+  "nationalities_wife",
+  "wife_passport",
+  "wife_taz",
+  "immigration_date_husband",
+  "immigration_date_wife",
+  "immigration_type_husband",
+  "immigration_type_wife",
+  "section_break_rpca",
+  "column_break_toio",
+  "\u05de\u05d7\u05dc\u05e7\u05d5\u05ea_\u05de\u05d8\u05e4\u05dc\u05d5\u05ea",
+  "department_statuses",
+  "deadlines",
+  "client_referents",
+  "regular_updates",
+  "override_last_contact_date",
+  "last_contact_date",
+  "last_system_date_display",
+  "contact_frequency",
+  "regular_updates_html",
+  "open_projects_section",
+  "related_projects_html",
+  "duties_section",
+  "duties_audit",
+  "debts_israeli",
+  "debts_us",
+  "duties_relocation",
+  "contacts_section",
+  "contacts",
+  "israeli_tax_section",
+  "israeli_tax_type",
+  "assessor",
+  "group_collecting_materials",
+  "capital_declaration_year",
+  "column_break_wgvg",
+  "shareholder_balance",
+  "debtor_current_year",
+  "debtor_previous_year",
+  "in_next_extension",
+  "column_break_mvsl",
+  "background_israeli_tax",
+  "relocation_section",
+  "engagement_relocation",
+  "assignee_id_relocation",
+  "vip_relocation",
+  "relocation_case_type",
+  "assessor_relocation",
+  "file_number_relocation",
+  "payroll_prepared_by_aas",
+  "visa_b1_valid_start_date",
+  "foreign_expert_status_period",
+  "special_notes_from_payroll_team",
+  "column_break_yyxu",
+  "tax_equalized_relocation",
+  "assignment_start_date_relocation",
+  "residency_status_of__tax_filing_year_relocation",
+  "home_relocation",
+  "host_relocation",
+  "questionnaire_received_relocation",
+  "passport_number_relocation",
+  "foreign_expert_status_entitlement",
+  "visa_b1_valid_end_date",
+  "column_break_brik",
+  "background_relocation",
+  "section_break_pvxx",
+  "\u05e6\u05e8\u05e3_\u05e7\u05d5\u05d1\u05e5",
+  "\u05e7\u05d1\u05d5\u05e6\u05d5\u05ea_\u05e7\u05e9\u05e8\u05d9\u05dd_tab",
+  "\u05de\u05e7\u05d5\u05dd_\u05dc\u05e7\u05e9\u05e8\u05d9\u05dd_\u05e9\u05dc_\u05d7\u05d1\u05e8\u05d5\u05ea",
+  "owned_companies_html",
+  "column_break_gquz",
+  "customer_name",
+  "customer_rating",
+  "referrer",
+  "section_break_0g4q",
+  "registered_children",
+  "non_registered_children",
+  "\u05e0\u05ea\u05d5\u05e0\u05d9_\u05d7\u05d1\u05e8\u05d4_tab",
+  "ein",
+  "\u05de\u05e0\u05d4\u05dc_\u05ea\u05d9\u05e7",
+  "company_establishment_date",
+  "shareholders_represent_by_firm",
+  "company_docs",
+  "\u05ea\u05d9\u05e7\u05d9\u05dd_\u05de\u05d5\u05dc_\u05d4\u05e8\u05e9\u05d5\u05d9\u05d5\u05ea_tab",
+  "section_authorities",
+  "cb_auth_1",
+  "income_tax_file_no",
+  "vat_file_no",
+  "withholding_file_no",
+  "column_break_sjzj",
+  "income_tax_status",
+  "\u05e1\u05d8\u05d8\u05d5\u05e1_\u05ea\u05d9\u05e7_\u05de\u05e2\u05de",
+  "withholding_status",
+  "section_frequencies",
+  "vat_report_frequency",
+  "advances_report_frequency",
+  "withholding_report_frequency",
+  "section_account",
+  "has_debit_authorization",
+  "entity_type",
+  "client_work_scope",
+  "accounting_software",
+  "accounting_software_other",
+  "payroll_software"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_h7p9",
+   "fieldtype": "Section Break",
+   "label": "\u05e4\u05e8\u05d8\u05d9 \u05dc\u05e7\u05d5\u05d7"
+  },
+  {
+   "fieldname": "client_type",
+   "fieldtype": "Link",
+   "label": "\u05e1\u05d5\u05d2 \u05dc\u05e7\u05d5\u05d7",
+   "options": "Client Types",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "hebrew_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "\u05e9\u05dd \u05d4\u05dc\u05e7\u05d5\u05d7 \u05d1\u05e2\u05d1\u05e8\u05d9\u05ea",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "english_name",
+   "fieldtype": "Data",
+   "label": "\u05e9\u05dd \u05d4\u05dc\u05e7\u05d5\u05d7 \u05d1\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_slu7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e1\u05e4\u05e8 \u05dc\u05e7\u05d5\u05d7",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "primary_phone",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "\u05de\u05e1\u05e4\u05e8 \u05d8\u05dc\u05e4\u05d5\u05df \u05e8\u05d0\u05e9\u05d9",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "secondary_phone",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e1\u05e4\u05e8 \u05d8\u05dc\u05e4\u05d5\u05df \u05e0\u05d5\u05e1\u05e3",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_break_z3jj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "primary_email",
+   "fieldtype": "Data",
+   "label": " \u05db\u05ea\u05d5\u05d1\u05ea \u05de\u05d9\u05d9\u05dc \u05e8\u05d0\u05e9\u05d9",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "secondary_email",
+   "fieldtype": "Data",
+   "label": "\u05db\u05ea\u05d5\u05d1\u05ea \u05de\u05d9\u05d9\u05dc \u05e0\u05d5\u05e1\u05e3",
+   "options": "Email"
+  },
+  {
+   "bold": 1,
+   "fieldname": "preferred_language",
+   "fieldtype": "Select",
+   "label": "\u05e9\u05e4\u05d4 \u05de\u05d5\u05e2\u05d3\u05e4\u05ea",
+   "options": "\n\u05e2\u05d1\u05e8\u05d9\u05ea\n\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea",
+   "reqd": 1,
+   "translatable": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "enable_editing_check_personal_information",
+   "fieldtype": "Check",
+   "label": "\u05d0\u05e4\u05e9\u05e8 \u05e2\u05e8\u05d9\u05db\u05d4"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "\u05de\u05d9\u05d3\u05e2 \u05db\u05dc\u05dc\u05d9"
+  },
+  {
+   "fieldname": "background",
+   "fieldtype": "Text",
+   "label": "\u05e8\u05e7\u05e2"
+  },
+  {
+   "fieldname": "special_requests",
+   "fieldtype": "Small Text",
+   "label": "\u05d1\u05e7\u05e9\u05d5\u05ea \u05de\u05d9\u05d5\u05d7\u05d3\u05d5\u05ea"
+  },
+  {
+   "fieldname": "column_break_mzzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "birth_date",
+   "fieldtype": "Date",
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da \u05dc\u05d9\u05d3\u05d4",
+   "mandatory_depends_on": "eval:doc.client_type!=\"\u05d7\u05d1\u05e8\u05d4\""
+  },
+  {
+   "fieldname": "portfolio_manager",
+   "fieldtype": "Link",
+   "label": "\u05de\u05e0\u05d4\u05dc \u05ea\u05d9\u05e7",
+   "options": "User"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "\u05de\u05e6\u05d1 \u05de\u05e9\u05e4\u05d7\u05ea\u05d9",
+   "mandatory_depends_on": "eval:doc.client_type!=\"\u05d7\u05d1\u05e8\u05d4\"",
+   "options": "\n\u05e8\u05d5\u05d5\u05e7\n\u05e0\u05e9\u05d5\u05d9\n\u05d2\u05e8\u05d5\u05e9\n\u05d0\u05dc\u05de\u05df"
+  },
+  {
+   "fieldname": "nationalities_husband",
+   "fieldtype": "Table MultiSelect",
+   "label": "\u05d0\u05d6\u05e8\u05d7\u05d5\u05d9\u05d5\u05ea \u05d1\u05e2\u05dc",
+   "mandatory_depends_on": "eval:doc.client_type!=\"\u05d7\u05d1\u05e8\u05d4\"",
+   "options": "Nationalities Details"
+  },
+  {
+   "fieldname": "husband_taz",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "\u05ea\u05e2\u05d5\u05d3\u05ea \u05d6\u05d4\u05d5\u05ea \u05d1\u05e2\u05dc",
+   "unique": 1
+  },
+  {
+   "fieldname": "husband_passport",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "\u05de\u05e1\u05e4\u05e8 \u05d3\u05e8\u05db\u05d5\u05df \u05d1\u05e2\u05dc"
+  },
+  {
+   "depends_on": "eval:doc.marital_status==\"\u05e0\u05e9\u05d5\u05d9\"",
+   "fieldname": "nationalities_wife",
+   "fieldtype": "Table MultiSelect",
+   "label": "\u05d0\u05d6\u05e8\u05d7\u05d5\u05d9\u05d5\u05ea \u05d0\u05d9\u05e9\u05d4",
+   "mandatory_depends_on": "eval:doc.marital_status==\"\u05e0\u05e9\u05d5\u05d9\"",
+   "options": "Nationalities Details"
+  },
+  {
+   "depends_on": "eval:doc.marital_status==\"\u05e0\u05e9\u05d5\u05d9\"",
+   "fieldname": "wife_passport",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e1\u05e4\u05e8 \u05d3\u05e8\u05db\u05d5\u05df \u05d0\u05d9\u05e9\u05d4"
+  },
+  {
+   "depends_on": "eval:doc.marital_status==\"\u05e0\u05e9\u05d5\u05d9\"",
+   "fieldname": "wife_taz",
+   "fieldtype": "Data",
+   "label": "\u05ea\u05e2\u05d5\u05d3\u05ea \u05d6\u05d4\u05d5\u05ea \u05d0\u05d9\u05e9\u05d4"
+  },
+  {
+   "fieldname": "immigration_date_husband",
+   "fieldtype": "Date",
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da \u05e2\u05dc\u05d9\u05d4 \u05d1\u05e2\u05dc"
+  },
+  {
+   "depends_on": "eval:doc.marital_status==\"\u05e0\u05e9\u05d5\u05d9\"",
+   "fieldname": "immigration_date_wife",
+   "fieldtype": "Date",
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da \u05e2\u05dc\u05d9\u05d4 \u05d0\u05d9\u05e9\u05d4"
+  },
+  {
+   "depends_on": "eval:doc.immigration_date_husband!=\"\"",
+   "fieldname": "immigration_type_husband",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d5\u05d2 \u05e2\u05dc\u05d9\u05d4 \u05d1\u05e2\u05dc",
+   "options": "\n\u05e2\u05d5\u05dc\u05d4 \u05d7\u05d3\u05e9\n\u05e2\u05d5\u05dc\u05d4 \u05d5\u05ea\u05d9\u05e7\n\u05ea\u05d9\u05d9\u05e8"
+  },
+  {
+   "depends_on": "eval:doc.immigration_date_wife!=\"\" && doc.marital_status==\"\u05e0\u05e9\u05d5\u05d9\" ",
+   "fieldname": "immigration_type_wife",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d5\u05d2 \u05e2\u05dc\u05d9\u05d4 \u05d0\u05d9\u05e9\u05d4",
+   "options": "\n\u05e2\u05d5\u05dc\u05d4 \u05d7\u05d3\u05e9\n\u05e2\u05d5\u05dc\u05d4 \u05d5\u05ea\u05d9\u05e7\n\u05ea\u05d9\u05d9\u05e8"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_rpca",
+   "fieldtype": "Section Break",
+   "label": "\u05e4\u05e8\u05d8\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd"
+  },
+  {
+   "fieldname": "column_break_toio",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "\u05de\u05d7\u05dc\u05e7\u05d5\u05ea_\u05de\u05d8\u05e4\u05dc\u05d5\u05ea",
+   "fieldtype": "Heading",
+   "label": "\u05de\u05d7\u05dc\u05e7\u05d5\u05ea \u05de\u05d8\u05e4\u05dc\u05d5\u05ea"
+  },
+  {
+   "fieldname": "department_statuses",
+   "fieldtype": "Table",
+   "label": "\u05e1\u05d8\u05d8\u05d5\u05e1 \u05de\u05d7\u05dc\u05e7\u05d5\u05ea \u05de\u05d8\u05e4\u05dc\u05d5\u05ea",
+   "options": "Client Department Status"
+  },
+  {
+   "fieldname": "deadlines",
+   "fieldtype": "Table",
+   "label": "\u05d0\u05d5\u05e8\u05db\u05d5\u05ea \u05d5\u05d3\u05d3\u05dc\u05d9\u05d9\u05df",
+   "options": "Client Deadline Row"
+  },
+  {
+   "fieldname": "client_referents",
+   "fieldtype": "Table",
+   "label": "\u05e8\u05e4\u05e8\u05e0\u05d8\u05d9\u05dd",
+   "options": "Client Referent Row"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "regular_updates",
+   "fieldtype": "Section Break",
+   "label": "\u05e2\u05d3\u05db\u05d5\u05e0\u05d9\u05dd \u05e9\u05d5\u05d8\u05e4\u05d9\u05dd \u05d5\u05e9\u05d9\u05d7\u05d5\u05ea"
+  },
+  {
+   "default": "0",
+   "fieldname": "override_last_contact_date",
+   "fieldtype": "Check",
+   "label": "\u05e2\u05d3\u05db\u05d5\u05df \u05d9\u05d3\u05e0\u05d9 \u05dc\u05ea\u05d0\u05e8\u05d9\u05da \u05e9\u05d9\u05d7\u05d4"
+  },
+  {
+   "fieldname": "last_contact_date",
+   "fieldtype": "Date",
+   "label": "\u05e9\u05d9\u05d7\u05d4 \u05d0\u05d7\u05e8\u05d5\u05e0\u05d4 \u05d1\u05d5\u05e6\u05e2\u05d4:"
+  },
+  {
+   "fieldname": "last_system_date_display",
+   "fieldtype": "HTML",
+   "label": "\u05e9\u05d9\u05d7\u05d4 \u05d0\u05d7\u05e8\u05d5\u05e0\u05d4 \u05de\u05d4\u05de\u05e2\u05e8\u05db\u05ea"
+  },
+  {
+   "fieldname": "contact_frequency",
+   "fieldtype": "Select",
+   "label": "\u05e0\u05d3\u05e8\u05e9\u05ea \u05e9\u05d9\u05d7\u05d4 \u05e4\u05e2\u05dd \u05d1:",
+   "options": "\n\u05d7\u05d5\u05d3\u05e9\n\u05e8\u05d1\u05e2\u05d5\u05df\n\u05e9\u05e0\u05ea\u05d9"
+  },
+  {
+   "fieldname": "regular_updates_html",
+   "fieldtype": "HTML",
+   "label": "\u05d8\u05d1\u05dc\u05ea \u05e2\u05d3\u05db\u05d5\u05e0\u05d9\u05dd \u05e9\u05d5\u05d8\u05e4\u05d9\u05dd"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "open_projects_section",
+   "fieldtype": "Section Break",
+   "label": "\u05e4\u05e8\u05d5\u05d9\u05e7\u05d8\u05d9\u05dd \u05e4\u05ea\u05d5\u05d7\u05d9\u05dd"
+  },
+  {
+   "fieldname": "related_projects_html",
+   "fieldtype": "HTML",
+   "label": "\u05e8\u05e9\u05d9\u05de\u05ea \u05e4\u05e8\u05d5\u05d9\u05e7\u05d8\u05d9\u05dd \u05e7\u05e9\u05d5\u05e8\u05d9\u05dd",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "duties_section",
+   "fieldtype": "Section Break",
+   "label": "\u05d7\u05d5\u05d1\u05d5\u05ea \u05e4\u05ea\u05d5\u05d7\u05d9\u05dd"
+  },
+  {
+   "fieldname": "duties_audit",
+   "fieldtype": "Data",
+   "label": "\u05d1\u05d9\u05e7\u05d5\u05e8\u05ea",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "debts_israeli",
+   "fieldtype": "Data",
+   "label": "\u05de\u05d9\u05e1\u05d9\u05dd \u05d9\u05e9\u05e8\u05d0\u05dc\u05d9\u05dd",
+   "read_only": 1
+  },
+  {
+   "fieldname": "debts_us",
+   "fieldtype": "Data",
+   "label": "\u05de\u05d9\u05e1\u05d9\u05dd \u05d0\u05de\u05e8\u05d9\u05e7\u05d0\u05d9\u05dd",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duties_relocation",
+   "fieldtype": "Data",
+   "label": "\u05e8\u05d9\u05dc\u05d5\u05e7\u05d9\u05d9\u05e9\u05df",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contacts_section",
+   "fieldtype": "Section Break",
+   "label": "\u05d0\u05e0\u05e9\u05d9 \u05e7\u05e9\u05e8 \u05dc\u05e2\u05d1\u05d5\u05d3\u05d4"
+  },
+  {
+   "fieldname": "contacts",
+   "fieldtype": "Table",
+   "label": "\u05d0\u05e0\u05e9\u05d9 \u05d4\u05e7\u05e9\u05e8",
+   "options": "Clients Contacts"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "israeli_tax_section",
+   "fieldtype": "Section Break",
+   "label": "\u05de\u05d9\u05e1\u05d9\u05dd \u05d9\u05e9\u05e8\u05d0\u05dc\u05d9\u05dd"
+  },
+  {
+   "fieldname": "israeli_tax_type",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d5\u05d2 \u05ea\u05d9\u05e7",
+   "options": "1\n2\n3"
+  },
+  {
+   "fieldname": "assessor",
+   "fieldtype": "Select",
+   "label": "\u05e4\u05e7\u05d9\u05d3 \u05e9\u05d5\u05de\u05d4"
+  },
+  {
+   "fieldname": "group_collecting_materials",
+   "fieldtype": "Select",
+   "label": "\u05e7\u05d1\u05d5\u05e6\u05ea \u05dc\u05e7\u05d5\u05d7\u05d5\u05ea \u05dc\u05e6\u05d5\u05e8\u05da \u05d0\u05d9\u05e1\u05d5\u05e3 \u05d7\u05d5\u05de\u05e8\u05d9\u05dd"
+  },
+  {
+   "fieldname": "capital_declaration_year",
+   "fieldtype": "Data",
+   "label": "\u05d7\u05d9\u05d9\u05d1 \u05d4\u05e6\u05d4\"\u05e0 \u05dc\u05e9\u05e0\u05ea:"
+  },
+  {
+   "fieldname": "column_break_wgvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shareholder_balance",
+   "fieldtype": "Data",
+   "label": "\u05d9\u05ea\u05e8\u05ea \u05d1\u05e2\u05dc \u05de\u05e0\u05d9\u05d5\u05ea"
+  },
+  {
+   "fieldname": "debtor_current_year",
+   "fieldtype": "Data",
+   "label": "\u05d7\u05d9\u05d9\u05d1 \u05d1\u05d3\u05d5\u05d7 \u05e9\u05e0\u05d4 \u05e0\u05d5\u05db\u05d9\u05d7\u05ea"
+  },
+  {
+   "fieldname": "debtor_previous_year",
+   "fieldtype": "Data",
+   "label": "\u05d7\u05d9\u05d9\u05d1 \u05d1\u05d3\u05d5\u05d7 \u05e9\u05e0\u05d4 \u05e7\u05d5\u05d3\u05de\u05ea"
+  },
+  {
+   "default": "0",
+   "fieldname": "in_next_extension",
+   "fieldtype": "Check",
+   "label": "\u05db\u05dc\u05d5\u05dc \u05d1\u05d0\u05d5\u05e8\u05db\u05d4 \u05e0\u05d5\u05e1\u05e4\u05ea?"
+  },
+  {
+   "fieldname": "column_break_mvsl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "background_israeli_tax",
+   "fieldtype": "Small Text",
+   "label": "\u05e8\u05e7\u05e2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "relocation_section",
+   "fieldtype": "Section Break",
+   "label": "\u05e8\u05d9\u05dc\u05d5\u05e7\u05d9\u05d9\u05e9\u05df\t\t\t\t\t"
+  },
+  {
+   "fieldname": "engagement_relocation",
+   "fieldtype": "Data",
+   "label": "Engagement"
+  },
+  {
+   "fieldname": "assignee_id_relocation",
+   "fieldtype": "Data",
+   "label": "Assignee ID"
+  },
+  {
+   "fieldname": "vip_relocation",
+   "fieldtype": "Data",
+   "label": "VIP"
+  },
+  {
+   "fieldname": "relocation_case_type",
+   "fieldtype": "Data",
+   "label": "\u05e1\u05d5\u05d2 \u05ea\u05d9\u05e7"
+  },
+  {
+   "fieldname": "assessor_relocation",
+   "fieldtype": "Data",
+   "label": "\u05e4\u05e7\u05d9\u05d3 \u05e9\u05d5\u05de\u05d4"
+  },
+  {
+   "fieldname": "file_number_relocation",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e1\u05e4\u05e8 \u05ea\u05d9\u05e7"
+  },
+  {
+   "fieldname": "payroll_prepared_by_aas",
+   "fieldtype": "Data",
+   "label": "Payroll prepared by AAS"
+  },
+  {
+   "fieldname": "visa_b1_valid_start_date",
+   "fieldtype": "Data",
+   "label": "Visa B1 valid start date"
+  },
+  {
+   "fieldname": "foreign_expert_status_period",
+   "fieldtype": "Data",
+   "label": "Foreign expert status Period"
+  },
+  {
+   "fieldname": "special_notes_from_payroll_team",
+   "fieldtype": "Data",
+   "label": "Special notes from payroll team"
+  },
+  {
+   "fieldname": "column_break_yyxu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_equalized_relocation",
+   "fieldtype": "Data",
+   "label": "Tax equalized"
+  },
+  {
+   "fieldname": "assignment_start_date_relocation",
+   "fieldtype": "Data",
+   "label": "Assignment start date"
+  },
+  {
+   "fieldname": "residency_status_of__tax_filing_year_relocation",
+   "fieldtype": "Data",
+   "label": "Residency status of  tax filing year"
+  },
+  {
+   "fieldname": "home_relocation",
+   "fieldtype": "Data",
+   "label": "Home"
+  },
+  {
+   "fieldname": "host_relocation",
+   "fieldtype": "Data",
+   "label": "Host"
+  },
+  {
+   "fieldname": "questionnaire_received_relocation",
+   "fieldtype": "Data",
+   "label": "Questionnaire received"
+  },
+  {
+   "fieldname": "passport_number_relocation",
+   "fieldtype": "Data",
+   "label": "Passport number"
+  },
+  {
+   "fieldname": "foreign_expert_status_entitlement",
+   "fieldtype": "Data",
+   "label": "Foreign expert status entitlement"
+  },
+  {
+   "fieldname": "visa_b1_valid_end_date",
+   "fieldtype": "Data",
+   "label": "Visa B1 valid end date"
+  },
+  {
+   "fieldname": "column_break_brik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "background_relocation",
+   "fieldtype": "Small Text",
+   "label": "\u05e8\u05e7\u05e2"
+  },
+  {
+   "fieldname": "section_break_pvxx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "\u05e6\u05e8\u05e3_\u05e7\u05d5\u05d1\u05e5",
+   "fieldtype": "Attach",
+   "label": "\u05e6\u05e8\u05e3 \u05e7\u05d5\u05d1\u05e5"
+  },
+  {
+   "fieldname": "\u05e7\u05d1\u05d5\u05e6\u05d5\u05ea_\u05e7\u05e9\u05e8\u05d9\u05dd_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u05e7\u05d1\u05d5\u05e6\u05d5\u05ea \u05e7\u05e9\u05e8\u05d9\u05dd"
+  },
+  {
+   "fieldname": "\u05de\u05e7\u05d5\u05dd_\u05dc\u05e7\u05e9\u05e8\u05d9\u05dd_\u05e9\u05dc_\u05d7\u05d1\u05e8\u05d5\u05ea",
+   "fieldtype": "Heading",
+   "label": "\u05de\u05e7\u05d5\u05dd \u05dc\u05e7\u05e9\u05e8\u05d9\u05dd \u05e9\u05dc \u05d7\u05d1\u05e8\u05d5\u05ea"
+  },
+  {
+   "fieldname": "owned_companies_html",
+   "fieldtype": "HTML",
+   "label": "\u05d7\u05d1\u05e8\u05d5\u05ea \u05d1\u05d1\u05e2\u05dc\u05d5\u05ea"
+  },
+  {
+   "fieldname": "column_break_gquz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "parent_private_client.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u05e9\u05dd \u05dc\u05e7\u05d5\u05d7 \u05de\u05e9\u05dc\u05dd",
+   "mandatory_depends_on": "eval:doc.is_group!=\"0\"",
+   "read_only_depends_on": "eval:doc.is_group==\"0\""
+  },
+  {
+   "fetch_from": "parent_private_client.customer_rating",
+   "fieldname": "customer_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u05d3\u05e8\u05d2\u05ea \u05dc\u05e7\u05d5\u05d7",
+   "options": "\n\u05d6\u05d4\u05d1\n\u05db\u05e1\u05e3\n\u05d0\u05e8\u05d3\n\u05e4\u05dc\u05d8\u05d9\u05e0\u05d4"
+  },
+  {
+   "fieldname": "referrer",
+   "fieldtype": "Link",
+   "label": "\u05dc\u05e7\u05d5\u05d7 \u05de\u05e4\u05e0\u05d4",
+   "options": "Private Client",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_0g4q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registered_children",
+   "fieldtype": "Table",
+   "label": "\u05d9\u05dc\u05d3\u05d9\u05dd \u05e8\u05e9\u05d5\u05de\u05d9\u05dd \u05d1\u05de\u05e2\u05e8\u05db\u05ea",
+   "options": "Client Children Registered"
+  },
+  {
+   "fieldname": "non_registered_children",
+   "fieldtype": "Table",
+   "label": "\u05d9\u05dc\u05d3\u05d9\u05dd \u05dc\u05d0 \u05e8\u05e9\u05d5\u05de\u05d9\u05dd \u05d1\u05de\u05e2\u05e8\u05db\u05ea",
+   "options": "Client Children"
+  },
+  {
+   "depends_on": "eval:doc.client_type==\"\u05d7\u05d1\u05e8\u05d4\"",
+   "fieldname": "\u05e0\u05ea\u05d5\u05e0\u05d9_\u05d7\u05d1\u05e8\u05d4_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u05e0\u05ea\u05d5\u05e0\u05d9 \u05d7\u05d1\u05e8\u05d4"
+  },
+  {
+   "depends_on": "eval:doc.client_type==\"\u05d7\u05d1\u05e8\u05d4\"",
+   "fieldname": "ein",
+   "fieldtype": "Data",
+   "label": "\u05d7''\u05e4",
+   "mandatory_depends_on": "eval:doc.client_type==\"\u05d7\u05d1\u05e8\u05d4\""
+  },
+  {
+   "fieldname": "\u05de\u05e0\u05d4\u05dc_\u05ea\u05d9\u05e7",
+   "fieldtype": "Link",
+   "label": "\u05de\u05e0\u05d4\u05dc \u05ea\u05d9\u05e7",
+   "mandatory_depends_on": "eval:doc.client_type==\"\u05d7\u05d1\u05e8\u05d4\"",
+   "options": "User"
+  },
+  {
+   "fieldname": "company_establishment_date",
+   "fieldtype": "Date",
+   "label": "\u05ea\u05d0\u05e8\u05d9\u05da \u05d4\u05e7\u05de\u05ea \u05d7\u05d1\u05e8\u05d4",
+   "mandatory_depends_on": "eval:doc.client_type==\"\u05d7\u05d1\u05e8\u05d4\""
+  },
+  {
+   "fieldname": "shareholders_represent_by_firm",
+   "fieldtype": "HTML",
+   "label": "\u05d1\u05e2\u05dc\u05d9 \u05de\u05e0\u05d9\u05d5\u05ea \u05d4\u05de\u05d9\u05d5\u05e6\u05d2\u05d9\u05dd \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d4\u05de\u05e9\u05e8\u05d3"
+  },
+  {
+   "fieldname": "company_docs",
+   "fieldtype": "Table",
+   "label": "\u05de\u05e1\u05de\u05db\u05d9 \u05d7\u05d1\u05e8\u05d5\u05ea",
+   "options": "Company Documents"
+  },
+  {
+   "fieldname": "\u05ea\u05d9\u05e7\u05d9\u05dd_\u05de\u05d5\u05dc_\u05d4\u05e8\u05e9\u05d5\u05d9\u05d5\u05ea_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u05ea\u05d9\u05e7\u05d9\u05dd \u05de\u05d5\u05dc \u05d4\u05e8\u05e9\u05d5\u05d9\u05d5\u05ea"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_authorities",
+   "fieldtype": "Section Break",
+   "label": "\u05ea\u05d9\u05e7\u05d9\u05dd \u05de\u05d5\u05dc \u05e8\u05e9\u05d5\u05d9\u05d5\u05ea"
+  },
+  {
+   "fieldname": "cb_auth_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "income_tax_file_no",
+   "fieldtype": "Data",
+   "label": "\u05ea\u05d9\u05e7 \u05de\u05e1 \u05d4\u05db\u05e0\u05e1\u05d4"
+  },
+  {
+   "fieldname": "vat_file_no",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e1 \u05ea\u05d9\u05e7 \u05de\u05e2\u05de"
+  },
+  {
+   "fieldname": "withholding_file_no",
+   "fieldtype": "Data",
+   "label": "\u05de\u05e1\u2019 \u05ea\u05d9\u05e7 \u05e0\u05d9\u05db\u05d5\u05d9\u05d9\u05dd"
+  },
+  {
+   "fieldname": "column_break_sjzj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "income_tax_status",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d8\u05d8\u05d5\u05e1 \u05ea\u05d9\u05e7 \u05de\u05e1 \u05d4\u05db\u05e0\u05e1\u05d4",
+   "options": "\n\u05e4\u05ea\u05d5\u05d7\n\u05e1\u05d2\u05d5\u05e8\n\u05dc\u05d0 \u05d9\u05d3\u05d5\u05e2"
+  },
+  {
+   "fieldname": "\u05e1\u05d8\u05d8\u05d5\u05e1_\u05ea\u05d9\u05e7_\u05de\u05e2\u05de",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d8\u05d8\u05d5\u05e1 \u05ea\u05d9\u05e7 \u05de\u05e2\u05de",
+   "options": "\n\u05e4\u05ea\u05d5\u05d7\n\u05e1\u05d2\u05d5\u05e8\n\u05dc\u05d0 \u05d9\u05d3\u05d5\u05e2"
+  },
+  {
+   "fieldname": "withholding_status",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d8\u05d8\u05d5\u05e1 \u05ea\u05d9\u05e7 \u05e0\u05d9\u05db\u05d5\u05d9\u05d9\u05dd",
+   "options": "\n\u05e4\u05ea\u05d5\u05d7\n\u05e1\u05d2\u05d5\u05e8\n\u05dc\u05d0 \u05d9\u05d3\u05d5\u05e2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_frequencies",
+   "fieldtype": "Section Break",
+   "label": "\u05ea\u05d3\u05d9\u05e8\u05d5\u05d9\u05d5\u05ea \u05d3\u05d9\u05d5\u05d5\u05d7"
+  },
+  {
+   "fieldname": "vat_report_frequency",
+   "fieldtype": "Select",
+   "label": "\u05ea\u05d3\u05d9\u05e8\u05d5\u05ea \u05d3\u05d5\u05d7\u05d5\u05ea \u05de\u05e2\u05de",
+   "options": "\n\u05d7\u05d5\u05d3\u05e9\u05d9\n\u05d3\u05d5-\u05d7\u05d5\u05d3\u05e9\u05d9\n\u05e8\u05d1\u05e2\u05d5\u05e0\u05d9\n\u05d7\u05e6\u05d9 \u05e9\u05e0\u05ea\u05d9\n\u05e9\u05e0\u05ea\u05d9"
+  },
+  {
+   "fieldname": "advances_report_frequency",
+   "fieldtype": "Select",
+   "label": "\u05ea\u05d3\u05d9\u05e8\u05d5\u05ea \u05d3\u05d5\u05d7 \u05de\u05e7\u05d3\u05de\u05d5\u05ea",
+   "options": "\n\u05d7\u05d5\u05d3\u05e9\u05d9\n\u05d3\u05d5-\u05d7\u05d5\u05d3\u05e9\u05d9\n\u05e8\u05d1\u05e2\u05d5\u05e0\u05d9\n\u05d7\u05e6\u05d9 \u05e9\u05e0\u05ea\u05d9\n\u05e9\u05e0\u05ea\u05d9"
+  },
+  {
+   "fieldname": "withholding_report_frequency",
+   "fieldtype": "Select",
+   "label": "\u05ea\u05d3\u05d9\u05e8\u05d5\u05ea \u05d3\u05d5\u05d7 \u05de.\u05d4. \u05e0\u05d9\u05db\u05d5\u05d9\u05d9\u05dd",
+   "options": "\n\u05d7\u05d5\u05d3\u05e9\u05d9\n\u05d3\u05d5-\u05d7\u05d5\u05d3\u05e9\u05d9\n\u05e8\u05d1\u05e2\u05d5\u05e0\u05d9\n\u05d7\u05e6\u05d9 \u05e9\u05e0\u05ea\u05d9\n\u05e9\u05e0\u05ea\u05d9"
+  },
+  {
+   "fieldname": "section_account",
+   "fieldtype": "Section Break",
+   "label": "\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d7\u05e9\u05d1\u05d5\u05df"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_debit_authorization",
+   "fieldtype": "Check",
+   "label": "\u05e7\u05d9\u05d5\u05dd \u05d4\u05e8\u05e9\u05d0\u05d4 \u05dc\u05d7\u05d9\u05d5\u05d1 \u05d7\u05e9\u05d1\u05d5\u05df"
+  },
+  {
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d5\u05d2 \u05d4\u05d4\u05ea\u05d0\u05d2\u05d3\u05d5\u05ea",
+   "options": "\n\u05e2\u05e6\u05de\u05d0\u05d9\n\u05d7\u05d1\u05e8\u05d4\n\u05e2\u05de\u05d5\u05ea\u05d4\n\u05d0\u05d7\u05e8"
+  },
+  {
+   "fieldname": "client_work_scope",
+   "fieldtype": "Select",
+   "label": "\u05e1\u05d5\u05d2 \u05e2\u05d1\u05d5\u05d3\u05d4 \u05dc\u05dc\u05e7\u05d5\u05d7",
+   "options": "\n\u05d4\u05e0\u05d4\"\u05d7\n\u05d7\u05e9\u05d1 \u05e9\u05db\u05e8\n\u05d3\u05d5\"\u05d7\u05d5\u05ea \u05e9\u05e0\u05ea\u05d9\u05d9\u05dd\n\u05d9\u05d9\u05e2\u05d5\u05e5\n\u05d0\u05d7\u05e8"
+  },
+  {
+   "fieldname": "accounting_software",
+   "fieldtype": "Select",
+   "label": "\u05ea\u05d5\u05db\u05e0\u05ea \u05d4\u05e0\u05d4\u05dc\u05ea \u05d7\u05e9\u05d1\u05d5\u05e0\u05d5\u05ea",
+   "options": "\n\u05e2\u05e6\u05de\u05d0\u05d9\u05ea\n\u05d7\u05e9\u05d1\u05e9\u05d1\u05ea\n\u05e1\u05de\u05d9\u05d8\n\u05d0\u05d7\u05e8"
+  },
+  {
+   "depends_on": "eval:doc.accounting_software==\"\u05d0\u05d7\u05e8\"",
+   "fieldname": "accounting_software_other",
+   "fieldtype": "Data",
+   "label": "\u05ea\u05d5\u05db\u05e0\u05ea \u05d4\u05e0\u05d4\u05dc\u05ea \u05d7\u05e9\u05d1\u05d5\u05e0\u05d5\u05ea \u2013 \u05d0\u05d7\u05e8"
+  },
+  {
+   "fieldname": "payroll_software",
+   "fieldtype": "Select",
+   "label": "\u05ea\u05d5\u05db\u05e0\u05ea \u05e9\u05db\u05e8",
+   "options": "\n\u05e2\u05d5\u05e7\u05e5\n\u05e9\u05d9\u05e7\u05dc\u05d5\u05dc\u05d9\u05ea\n\u05d0\u05d7\u05e8"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "\u05d4\u05d5\u05e1\u05e4\u05ea \u05e9\u05d3\u05d5\u05ea",
+   "link_doctype": "Client Projects",
+   "link_fieldname": "client_link"
+  },
+  {
+   "group": "\u05d4\u05d5\u05e1\u05e4\u05ea \u05e9\u05d3\u05d5\u05ea",
+   "link_doctype": "Regular Updates",
+   "link_fieldname": "client"
+  }
+ ],
+ "modified": "2025-10-14 12:03:40.030814",
+ "modified_by": "daniel.vishna@gmail.com",
+ "module": "Aboulafia",
+ "name": "Private Client",
+ "naming_rule": "Expression",
+ "nsm_parent_field": "parent_private_client",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Yellow",
+   "title": "\u05d6\u05d4\u05d1"
+  },
+  {
+   "color": "Gray",
+   "title": "\u05db\u05e1\u05e3"
+  },
+  {
+   "color": "Orange",
+   "title": "\u05d0\u05e8\u05d3"
+  }
+ ],
+ "title_field": "hebrew_name",
+ "track_changes": 1,
+ "translated_doctype": 1
+}
