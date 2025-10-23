@@ -1,3 +1,6 @@
+/* DEBUG */
+body { outline: 1px solid magenta !important; }
+
 /* Hide Comments & Activity across all Desk forms */
 .form-comments,
 .timeline,
@@ -6,6 +9,7 @@
 .btn-new-event {
   display: none !important;
 }
+
 
 /* לעתים הכותרת "Comments" עטופה בסקשן נוסף */
 .card-section:has(.form-comments) { display: none !important; }
