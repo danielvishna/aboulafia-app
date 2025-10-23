@@ -34,20 +34,3 @@
 	display: none !important;
 }
 
-/* Activity / Timeline variants */
-.document-activity,
-.form-timeline,
-.timeline,
-.timeline-wrapper,
-.frappe-timeline,
-#timeline {
-	display: none !important;
-}
-
-/* Hide common wrappers if present */
-.card-section:has(.document-activity),
-.card-section:has(.timeline),
-.frappe-card:has(.document-activity),
-.frappe-card:has(.timeline) {
-	display: none !important;
-}

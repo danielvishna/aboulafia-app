@@ -60,54 +60,34 @@
 	else document.addEventListener("DOMContentLoaded", () => applyHide(document));
 })();
 
-// --- Force-hide Activity/Timeline on every form ---
+// ---- Force-hide Activity block on every form (covers all DOM variants) ----
 (function () {
-	const ACTIVITY_SELECTORS = [
-		".document-activity",
-		".form-timeline",
-		".timeline",
-		".timeline-wrapper",
-		".frappe-timeline",
-		"#timeline",
-	].join(", ");
+  const ACTIVITY_SELECTORS = [
+    ".timeline", ".timeline-wrapper", ".frappe-timeline",
+    ".form-timeline", "#timeline", ".document-activity",
+    ".activity", ".activity-container"
+  ].join(", ");
 
-	function hideActivity(frm) {
-		const root = frm && frm.$wrapper ? frm.$wrapper[0] : document;
+  function hideActivity(frm) {
+    const root = frm && frm.$wrapper ? frm.$wrapper[0] : document;
 
-		// 1) נסיון API אם יש timeline
-		if (frm && frm.timeline && frm.timeline.$wrapper) {
-			frm.timeline.$wrapper.hide();
-		}
+    // 1) מחיקה לפי מחלקות נפוצות
+    root.querySelectorAll(ACTIVITY_SELECTORS).forEach((el) => {
+      el.style.setProperty("display", "none", "important");
+    });
 
-		// 2) נסיון DOM ישיר
-		root.querySelectorAll(ACTIVITY_SELECTORS).forEach((el) => {
-			el.style.setProperty("display", "none", "important");
-		});
+    // 2) מחיקה לפי כותרת "Activity" – מסתיר את הכרטיס/סקשן העוטף
+    root.querySelectorAll("h4, .section-head, .ellipsis, .widget-title").forEach((h) => {
+      if (/^\s*Activity\s*$/i.test(h.textContent.trim())) {
+        const card = h.closest(".card, .card-section, .frappe-card, .widget, .section-body, .layout-main-section");
+        (card || h).style.setProperty("display", "none", "important");
+      }
+    });
+  }
 
-		// 3) אם יש כרטיס/סקשן עוטף – להסתיר גם אותו
-		const wrappers = [
-			".card-section:has(.document-activity)",
-			".card-section:has(.timeline)",
-			".frappe-card:has(.document-activity)",
-			".frappe-card:has(.timeline)",
-		];
-		wrappers.forEach((sel) => {
-			root.querySelectorAll(sel).forEach((el) => {
-				el.style.setProperty("display", "none", "important");
-			});
-		});
-	}
-
-	// להריץ בכל שלבי הרינדור
-	frappe.ui.form.on("*", {
-		onload_post_render: hideActivity,
-		refresh: hideActivity,
-		after_save: hideActivity,
-	});
-
-	// תצפית למקרה שה-Activity נוסף מאוחר יותר
-	const mo = new MutationObserver(() => hideActivity());
-	document.addEventListener("DOMContentLoaded", () => {
-		mo.observe(document.body, { childList: true, subtree: true });
-	});
+  frappe.ui.form.on("*", {
+    onload_post_render: hideActivity,
+    refresh: hideActivity,
+    after_save: hideActivity,
+  });
 })();
