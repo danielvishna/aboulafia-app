@@ -25,9 +25,11 @@ doc_events = {
         "validate": "aboulafia.aboulafia.doctype.customer.customer.on_validate",
     },
 }
-app_include_css = ["/assets/aboulafia/css/custom_styles.css"]
+# app_include_css = ["/assets/aboulafia/css/custom_styles.css"]
 
-app_include_js = ["/assets/aboulafia/js/custom_ui.js",]
+# app_include_js = ["/assets/aboulafia/js/custom_ui.js",]
+desk_include_css = ["/assets/aboulafia/css/custom_styles.css"]
+desk_include_js  = ["/assets/aboulafia/js/custom_ui.js"]
 
 # app_include_js = "public/js/_ping.js"
 
