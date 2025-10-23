@@ -2,7 +2,7 @@ import frappe
 
 def on_validate(doc, method=None):
     # --- חוק 1: בדיקת ייחודיות של לקוח + שנת פרויקט ---
-    if not doc.customer or doc.project_description != "":
+    if not doc.customer:
         return  # אם אין לקוח, לא נבצע את הבדיקה
     
     duplicate_project = frappe.db.exists("Project", {
