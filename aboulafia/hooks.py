@@ -25,6 +25,7 @@ doc_events = {
         "validate": "aboulafia.aboulafia.doctype.customer.customer.on_validate",
     },
 }
+app_include_css = "/assets/aboulafia/css/custom_styles.css"
 
 # app_include_js = "public/js/_ping.js"
 
