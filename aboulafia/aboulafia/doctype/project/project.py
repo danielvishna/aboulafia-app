@@ -18,17 +18,3 @@ def on_validate(doc, method=None):
                 אם תרצה לצור עוד מאותו סוג לשנת {doc.project_year}</b>, יש למלא שדה תיאור לפרויקט.",
             title="כפילות פרויקט"
         )
-
-    # --- חוק 2: בדיקה שדה תיאור חובה אם זה "עוד פרויקט" (כלומר, לא הראשון) ---
-    # נבדוק אם קיימים פרויקטים אחרים לאותו לקוח
-    other_projects_exist = frappe.db.exists("Project", {
-        "customer": doc.customer,
-        "name": ["!=", doc.name] # שוב, לא כולל את המסמך הנוכחי
-    })
-
-    # אם קיימים פרויקטים אחרים, והתיאור במסמך הנוכחי ריק -> חסום
-    if other_projects_exist and not doc.description:
-        frappe.throw(
-            f"מאחר שללקוח <b>{doc.customer}</b> יש פרויקטים קיימים, חובה למלא את שדה התיאור.",
-            title="תיאור נדרש"
-        )
