@@ -9,7 +9,7 @@ def on_validate(doc, method=None):
         "customer": doc.customer,
         "project_year": doc.project_year,
         "project_type": doc.project_type,
-        "name": ["!=", doc.name]  
+        "name": ["!=", doc.name], 
     })
 
     if duplicate_project:
