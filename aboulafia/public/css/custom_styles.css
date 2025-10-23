@@ -1,0 +1,13 @@
+/* הסתרת תיבת הוספת התגובות (Comments) 
+  שנמצאת בתחתית הטופס
+*/
+.form-comments {
+    display: none !important;
+}
+
+/* הסתרת כל אזור ה"פעילות" (Activity) 
+  שכולל את היסטוריית השינויים, מיילים וכו'
+*/
+.form-timeline {
+    display: none !important;
+}
