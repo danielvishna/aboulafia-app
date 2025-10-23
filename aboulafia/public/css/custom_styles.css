@@ -1,17 +1,35 @@
-/* DEBUG */
-body { outline: 1px solid magenta !important; }
+/* --- Hide Comments & Activity on all Desk forms --- */
 
-/* Hide Comments & Activity across all Desk forms */
+/* Comments input + wrapper variants */
 .form-comments,
-.timeline,
-.timeline-actions,
-.btn-new-email,
-.btn-new-event {
-  display: none !important;
+.comment-box,
+.comment-box-container,
+.comment-input,
+.comment-input-wrapper,
+.comments,
+#comments,
+.frappe-comments,
+.frappe-form-comments {
+	display: none !important;
 }
 
+/* Activity / Timeline variants */
+.timeline,
+.timeline-wrapper,
+.frappe-timeline,
+.form-timeline,
+.document-activity,
+#timeline {
+	display: none !important;
+}
 
-/* לעתים הכותרת "Comments" עטופה בסקשן נוסף */
-.card-section:has(.form-comments) { display: none !important; }
-/* ולעתים Activity עטוף אחרת */
-.card-section:has(.timeline) { display: none !important; }
+/* Hide common wrappers if present */
+.card-section:has(.form-comments),
+.card-section:has(.comment-box),
+.card-section:has(.timeline),
+.card-section:has(.frappe-timeline),
+.frappe-card:has(.form-comments),
+.frappe-card:has(.timeline),
+.frappe-card:has(.frappe-timeline) {
+	display: none !important;
+}
