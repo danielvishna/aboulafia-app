@@ -1,47 +1,39 @@
-// aboulafia/public/js/custom_ui.js
-// Hide Comments & Activity timeline across all Desk forms (Frappe v15+)
-
+// Global hide for Comments & Activity (with logs for verification)
 (function () {
-  // Optional: allowlist של דוקטייפים שבהם כן תרצה לראות Comments/Activity
-  // השאר ריק כדי להסתיר לכולם. אפשר להכניס שמות למשל: ["ToDo", "Issue"]
-  const ALLOWLIST = new Set([]);
+	function hideBits(frm) {
+		if (!frm) return;
+		try {
+			// נסה להסתיר מיד
+			frm.$wrapper
+				.find(
+					".form-comments, .timeline, .timeline-actions, .btn-new-email, .btn-new-event"
+				)
+				.hide();
+			// נסה גם להסיר סקשנים עוטפים אם קיימים
+			frm.$wrapper.find(".card-section").has(".form-comments").hide();
+			frm.$wrapper.find(".card-section").has(".timeline").hide();
 
-  function hideBits(frm) {
-    try {
-      if (!frm || !frm.doctype || ALLOWLIST.has(frm.doctype)) return;
+			// נסה שוב אחרי שה-DOM של הטופס מתייצב
+			setTimeout(() => {
+				frm.$wrapper
+					.find(
+						".form-comments, .timeline, .timeline-actions, .btn-new-email, .btn-new-event"
+					)
+					.hide();
+				frm.$wrapper.find(".card-section").has(".form-comments").hide();
+				frm.$wrapper.find(".card-section").has(".timeline").hide();
+			}, 250);
 
-      // --- Hide Comments block ---
-      // מכסה גם רינדור מאוחר ושינויים דינמיים
-      frm.$wrapper.find('.form-comments').hide();
+			// לוג בדיקה
+			console.log("[aboulafia] hideBits applied on", frm.doctype, frm.docname);
+		} catch (e) {
+			console.warn("[aboulafia] hideBits error:", e);
+		}
+	}
 
-      // --- Hide Activity (Timeline) ---
-      // API פנימי של הטיימליין
-      if (frm.timeline && frm.timeline.$wrapper) {
-        frm.timeline.$wrapper.hide();
-      }
-      // גיבוי: כיתה כללית
-      frm.$wrapper.find('.timeline').hide();
-
-      // Hide timeline action buttons (New Email / New Event וכד')
-      frm.$wrapper.find('.timeline-actions, .btn-new-email, .btn-new-event').hide();
-
-      // לפעמים הכותרות נבנות מאוחר — נסה שוב קצר אחרי
-      setTimeout(() => {
-        frm.$wrapper.find('.form-comments, .timeline, .timeline-actions, .btn-new-email, .btn-new-event').hide();
-        if (frm.timeline && frm.timeline.$wrapper) {
-          frm.timeline.$wrapper.hide();
-        }
-      }, 200);
-    } catch (e) {
-      // אל תעצור את ה-UI אם משהו השתבש
-      console.warn('[aboulafia] hideBits error:', e);
-    }
-  }
-
-  // מפעילים לכל הדוקטייפים (Desk only)
-  frappe.ui.form.on('*', {
-    refresh: hideBits,
-    onload_post_render: hideBits,
-    after_save: hideBits
-  });
+	frappe.ui.form.on("*", {
+		onload_post_render: hideBits,
+		refresh: hideBits,
+		after_save: hideBits,
+	});
 })();
