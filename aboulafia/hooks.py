@@ -26,6 +26,9 @@ doc_events = {
     },
 }
 app_include_css = "/assets/aboulafia/css/custom_styles.css"
+app_include_js = [
+    "/assets/aboulafia/js/custom_ui.js",
+]
 
 # app_include_js = "public/js/_ping.js"
 
