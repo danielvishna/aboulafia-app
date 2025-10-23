@@ -49,7 +49,7 @@ doc_events = {
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/aboulafia/css/custom_styles.css"
+app_include_css = ["/assets/aboulafia/css/custom_styles.css", "/assets/aboulafia/aboulafia/css/custom_styles.css"]
 # app_include_js = "/assets/aboulafia/js/aboulafia.js"
 
 # include js, css files in header of web template
