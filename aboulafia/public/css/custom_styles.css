@@ -1,13 +1,13 @@
-/* הסתרת תיבת הוספת התגובות (Comments) 
-  שנמצאת בתחתית הטופס
-*/
-.form-comments {
-    display: none !important;
+/* Hide Comments & Activity across all Desk forms */
+.form-comments,
+.timeline,
+.timeline-actions,
+.btn-new-email,
+.btn-new-event {
+  display: none !important;
 }
 
-/* הסתרת כל אזור ה"פעילות" (Activity) 
-  שכולל את היסטוריית השינויים, מיילים וכו'
-*/
-.form-timeline {
-    display: none !important;
-}
+/* לעתים הכותרת "Comments" עטופה בסקשן נוסף */
+.card-section:has(.form-comments) { display: none !important; }
+/* ולעתים Activity עטוף אחרת */
+.card-section:has(.timeline) { display: none !important; }
